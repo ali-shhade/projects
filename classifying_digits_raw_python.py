@@ -8,11 +8,13 @@ X = np.array(mnist.data)
 y = np.array(mnist.target)
 m, n = X.shape
 #print(X.shape)
+
 X_train, X_test, Y_train, Y_test = train_test_split(X,y , test_size=0.2)
 X_train = X_train.T
 Y_train = Y_train.T
 #print(X_train.shape)
 #print(X_test[0])
+
 def init_params():
     W1 = np.random.randn(10, 64) * np.sqrt(2 / 64)
     b1 = np.random.randn(10,1)
